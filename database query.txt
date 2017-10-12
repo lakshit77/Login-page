@@ -1,0 +1,17 @@
+CREATE DATABASE dbtest;
+
+CREATE TABLE `users` (
+  `userId` int(11) NOT NULL,
+  `userName` varchar(30) NOT NULL,
+  `userEmail` varchar(60) NOT NULL,
+  `userPass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userId`),
+  ADD UNIQUE KEY `userEmail` (`userEmail`);
+
+ALTER TABLE `users`
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
